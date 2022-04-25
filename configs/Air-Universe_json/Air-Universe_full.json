@@ -1,0 +1,37 @@
+{
+  "log": {
+    "log_level": "info"
+  },
+  "panel": {
+    "type": "v2board",
+    "url": "https://SSPanel.address",
+    "key": "SSPanel-Key",
+    "node_ids": [1, 2],
+    "nodes_type": ["vmess", "ss"],
+    "nodes_proxy_protocol": [true, false]
+  },
+  "proxy": {
+    "type": "xray",
+    "alter_id": 1,
+    "auto_generate": true,
+    "in_tags": [
+      "p0",
+      "p1"
+    ],
+    "api_address": "127.0.0.1",
+    "api_port": 10085,
+    "force_close_tls": false,
+    "log_path": "./v2.log",
+    "cert": {
+      "cert_path": "/path/to/certificate.crt",
+      "key_path": "/path/to/key.key"
+    },
+    "speed_limit_level": [0, 0.1, 5, 10, 15]
+  },
+  "sync": {
+    "interval": 60,
+    "fail_delay": 5,
+    "timeout": 5,
+    "post_ip_interval": 300
+  }
+}
